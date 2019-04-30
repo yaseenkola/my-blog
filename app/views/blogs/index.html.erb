@@ -13,9 +13,9 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
-        <td><%= link_to blog.status, "javascript:void(0);", class: "test", id: blog.id %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td style="text-decoration: none;"><%= link_to blog.status, "javascript:void(0);", class: "test", id: blog.id %></td>
+        <!--<td><%= link_to 'Show', blog %></td>-->
+        <!--<td><%= link_to 'Edit', edit_blog_path(blog) %></td>-->
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
