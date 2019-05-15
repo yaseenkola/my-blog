@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
+    <% current_user.blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
         <td><%= link_to blog.status, "javascript:void(0);", class: "test", id: blog.id, style:"text-decoration: none;"  %></td>

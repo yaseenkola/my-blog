@@ -12,7 +12,7 @@
          
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Students
+            Blogs
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= active_link_to "New Blog", new_blog_path, class: "dropdown-item" %>
@@ -22,7 +22,6 @@
      </ul>
      
      <ul class="navbar-nav ml-auto">
-          
      
           <li class="nav-item">
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
