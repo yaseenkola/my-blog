@@ -6,4 +6,6 @@ class User < ApplicationRecord
          
   has_many :blogs
   
+  has_many :amol361s, dependent: :destroy
+  
 end

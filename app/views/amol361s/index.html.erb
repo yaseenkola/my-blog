@@ -1,0 +1,101 @@
+<div id="content_header361">
+	<h1 id="main_heading">361° Amol Statement</h1>
+
+	<div id="app-back-button">
+		<%= link_to image_tag("back.png",:border => 0), 'javascript:history.go(-1);' %>
+	</div>
+
+</div>
+
+<div id="inner-tab-menu">
+  <ul>
+      <li><%= link_to 'New Entry', :controller => 'amol361s',
+          :action => 'new' %></li>
+  </ul>
+</div>
+
+
+<br>
+
+<% @balance = 0 %>
+
+
+<div class="row">
+	
+	<div class="col-md-12 col-md-offset-0">
+		
+		<div  class="table-responsive myTable">
+			
+			<table class="table listing text-center">
+			
+
+				<thead>
+					<tr class="tr-head">
+						<td>Date</td>
+						<td>Description</td>
+						<td>Amount</td>
+						<td>Discount</td>
+						<td>Paid</td>
+						<td>Balance</td>
+						<td>DelnDel</td>
+						<td>Remark</td>
+						
+						<td id="mystyle">Hide</td>
+
+					</tr>
+				</thead>
+
+				<a href="#" class="toggle-formed" style="float: right;" ><strong>Search</strong></a>
+				
+				<div id="sample">
+					
+					<%= form_tag amol361s_path, remote: true, method: :get, class: "form-group", role: "search" do %>
+					<p>
+						<center><%= text_field_tag :search, params[:search], placeholder: "Search for.....", autofocus: true, class: "form-control-search" %>
+							<%= submit_tag "Search", name: nil, class: "btn btn-md btn-primary" %></center>
+						</p>
+						<% end %><br>
+					</div>
+					
+					<tr>
+						<td></td>
+					</tr>
+					
+					<tbody id = "kola">              
+						<%= render @amol361s %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br> 
+	<br> 
+
+<!-- <button class="button button5">Black</button> -->
+	<%= link_to "Unhide all", unhide_all_amol361_path, method: :put, class: "button button5", style:"color:  pink;margin-left: 927px; display: inline;" %>
+
+ 
+
+	<center><p class="<%= @balance >= 0 ? "balance_pos" : "balance_neg" %>"><b><%= number_to_currency(@balance.abs, :unit => 'AED ', :delimiter => ",", :precision => 0) %></b></p></center>
+
+
+	<!--           |=== HERE  -->
+	<a href="#" class="toggle-form">...</a>
+
+	
+
+	<div id="test">
+		<h2>Import Statements</h2>
+		<%= form_tag import_amol361s_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Import" %>
+		<% end %>
+	</div>
+
+
+    <br>
+    <br>
+    <br>
+	<center> <%= link_to "Remove All", remove_all_amol361s_path, :method => :get, data: {confirm: 'Are you sure?'} %></center>

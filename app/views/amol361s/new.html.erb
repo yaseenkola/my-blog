@@ -1,0 +1,30 @@
+<div id="content_header361">
+	<h1 id="main_heading" style="color: darkred;">New Amol</h1>
+
+	<div id="app-back-button">
+		<%= link_to image_tag("back.png",:border => 0), 'javascript:history.go(-1);' %>
+	</div>
+
+</div>
+
+<%= render 'form' %>
+
+<script>
+$('input[type="text"]').on('blur', function() {
+    var Calc_amount = $('#amol361_amount');
+    var amount = Calc_amount.val();
+
+    var Calc_discount = $('#amol361_discount');
+    var discount = Calc_discount.val();
+
+    var Calc_paid = $('#amol361_paid');
+    var paid = Calc_paid.val();
+
+    var Calc_balance = $('#amol361_balance');
+
+    var balance = amount - discount - paid;
+
+    Calc_balance.val(balance + <%= Amol361.last.try(:balance) || 0 %>);
+
+});
+</script>

@@ -1,0 +1,31 @@
+<h1><%= @amol361.description %></h1>
+
+
+
+<p><%= link_to 'Edit Amol', edit_amol361_path(@amol361) %></p>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr class="info">
+			<th>amol361</th>
+		</tr>
+        <tr class="info">
+            <td>Date : <%= @amol361.date.strftime('%d/%m/%Y') %></td>
+        </tr>
+        <tr class="info">
+            <td>Description : <%= @amol361.description %></td>
+        </tr>
+        <tr class="info">
+            <td>Amount ( AED ) : <%= @amol361.amount %></td>
+        </tr>
+        <tr class="info">
+                  <td>Discount ( AED ): <%= @amol361.discount %></td>
+              </tr>
+              <tr class="info">
+                  <td>Paid ( AED ): <%= @amol361.paid %></td>
+              </tr>    
+    </tbody>
+</table>
+
+<p><%= link_to 'Delete Amol', @amol361, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+

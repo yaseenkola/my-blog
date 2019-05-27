@@ -14,6 +14,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require search
+//= require custom
 //= require_tree .
 
 /* global $ */

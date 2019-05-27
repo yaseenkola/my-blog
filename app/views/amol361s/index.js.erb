@@ -1,0 +1,12 @@
+<% @balance = 0 %>
+$('#kola').empty();
+
+<% if @amol361s.empty? %>
+$('.tr-head').remove();
+$('#kola').append("No Results Found For Your Search...");
+$("#kola").css({"background-color": "white", "font-size": "100%", "font-weight": "900"}); 
+<% else %>
+<% @amol361s.each do |amol361| %>
+$('#kola').append("<%= j render amol361 %>");
+<% end %>
+<% end %>

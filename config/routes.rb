@@ -15,4 +15,19 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :amol361s do 
+		member do 
+			put :hide
+		end
+	end
+
+	put "unhide_all_amol361" => "amol361s#unhide_all"
+
+
+	resources :amol361s do 
+		collection { post :import }
+	end
+
+	get "remove_all_amol361s" => "amol361s#remove_all"
+  
 end

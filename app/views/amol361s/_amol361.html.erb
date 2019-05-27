@@ -1,0 +1,35 @@
+<tr class="tr-<%= cycle('odd', 'even') %>" id='<%= "tr_#{amol361.id}" %>'>
+
+	
+
+	<td class="col-1"><%= link_to amol361.date.try(:strftime,'%d/%m/%Y'), edit_amol361_path(amol361) %></td>
+	
+	<td class="col-3"><%= span_with_possibly_red_color amol361.description %></td>
+
+
+	<td class="col-1"><%= number_with_precision(amol361.amount, :delimiter => ",", :precision => 2) %></td>
+
+	<td class="col-1 neg"><%= number_with_precision(amol361.discount, :delimiter => ",", :precision => 2) %></td>
+
+	<td class="col-1 neg"><%= number_with_precision(amol361.paid, :delimiter => ",", :precision => 2) %></td>
+
+
+	<% @balance += amol361.amount.to_f - amol361.discount.to_f - amol361.paid.to_f %>
+
+	<% color = @balance >= 0 ? "pos" : "neg" %>
+
+	<td class="col-1 <%= color %>"><%= number_with_precision(@balance.abs, :delimiter => ",", :precision => 0) %></td>
+
+	<td class="col-1"><%= amol361.delndel %></td>
+
+	<td class="col-1"><%= amol361.remark %></td>
+
+
+<td class="col-1"><%= link_to "Hide", hide_amol361_path(amol361), method: :put, remote: true, style: "color:#bb7272;" %>
+	<%= link_to amol361, method: :delete, data: { confirm: "Are you sure?" }, :class => 'delete_item' do %>
+	<i class="fa fa-trash" ></i>
+	<% end %>
+</td>
+
+
+</tr>

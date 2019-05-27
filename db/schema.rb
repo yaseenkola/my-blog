@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190513081441) do
+ActiveRecord::Schema.define(version: 20190527102223) do
+
+  create_table "amol361s", force: :cascade do |t|
+    t.date "date"
+    t.text "description"
+    t.decimal "amount"
+    t.decimal "discount"
+    t.decimal "paid"
+    t.decimal "balance", precision: 10, scale: 2
+    t.string "delndel"
+    t.string "remark"
+    t.boolean "hidden", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"

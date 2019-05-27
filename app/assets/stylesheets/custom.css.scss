@@ -40,3 +40,222 @@
   letter-spacing: -1px;
   font-weight: bold;
 }
+
+.datetime select:nth-child(1) {
+	border-radius: 8px;
+	width: 29.33%;
+	height: 35px;
+	border-bottom: solid 2px #A9A9A9;
+	text-align: center;
+}
+
+.datetime select:nth-child(2) {
+	border-radius: 8px;
+	width: 39%;
+	height: 35px;
+	border-bottom: solid 2px #A9A9A9;
+	text-align: center;
+}
+
+.datetime select:nth-child(3) {
+	border-radius: 8px;
+	width: 27%;
+	height: 35px;
+	border-bottom: solid 2px #A9A9A9;
+	text-align: center;
+}
+
+#content_header361 {
+	padding-left:20px;
+	height:80px;
+	background:#fff image-url("header_underline361.jpg") bottom no-repeat;
+	background-color: lightgoldenrodyellow;
+	padding-top: 10px;
+}
+
+// .main_heading {
+// 	margin-top: 20px;
+// 	font-family: inherit;
+// 	font-size: 23px;
+// 	line-height: 0.5;
+// 	text-align: center;
+// 	color: antiquewhite;
+// 	font-weight: bold;
+// 	margin-bottom: -1px;
+// }
+
+// div h1 #main_heading {
+// 	color: red;
+// 	text-align: center;
+// }
+
+#app-back-button {
+	float: right;
+	margin-top: -30px;
+	position: relative;
+}
+
+#app-back-button a {
+	margin:0;
+	padding:0;
+	float:right
+}
+
+#app-back-button a img {
+	height:37px;
+	margin:0;
+	padding:0;
+	width:138px;
+	margin-right:57px;
+	margin-top: -15px;
+}
+
+/* Inner tab menu */
+
+#inner-tab-menu {
+	height : 1.5em;
+	margin : 0;
+	padding : 0;
+}
+
+#inner-tab-menu ul {
+	float : right;
+	margin : 0 10px 0 0;
+	padding : 0;
+}
+
+#inner-tab-menu ul li {
+	background-color : #900;
+	color : #fff;
+	float : left;
+	font-size : 0.9em;
+	height : 1.5em;
+	list-style-type : none;
+	margin : 0 50px 0 0px;
+	padding : 0;
+	text-align : center;
+	width : 130px;
+}
+
+#inner-tab-menu ul li a {
+	color : #fff;
+	text-decoration : none;
+}
+
+#inner-tab-menu ul li a:hover {
+	color : #b9b7b7;
+	text-decoration : none;
+	transition: all .4s ease-in-out;
+}
+
+.myTable {
+	/*background: #C3D9FF none repeat scroll 0% 0%;*/
+	background: rgba(0, 0, 0, 0.09) none repeat scroll 0% 0%;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 20px 20px 15px;
+	/*padding: 20px 20px 30px 15px;*/
+}
+
+.myTable .table,
+.myTable tr {
+	border: 1px solid #C3D9FF;
+}
+.table.listing tr.tr-head {
+	background: #fff;
+	color: #990a10;
+	font-weight: bold;
+	border: 1px solid #C3D9FF;
+}
+.table.listing .tr-head td {
+	padding: 5px;
+	/*border: 1px solid #C3D9FF;*/
+	border: none; /* new added */
+	display: table-cell;
+	vertical-align: middle;
+}
+.table.listing .tr-odd {
+	/*background: #fff;
+	color: #27292b;*/
+	background: #daaaaa; /*  new added  */
+	color: #5d4e18;
+	font-weight: 600;
+	font-size: 14px;
+	border: 1px solid #C3D9FF;
+}
+.table.listing .tr-even {
+	/*background: #f1f6ff;*/
+	background: #d2cccc;/*  new added  */
+	/*color: #27292b;*/
+	color: #787d82;
+	font-weight: 600;
+	font-size: 14px;
+	border: 1px solid #C3D9FF;
+}
+
+.table.listing td.col-1 {
+	/*width: none;*/
+	width: 20%;
+	padding: 5px;
+	/*border: 1px solid #C3D9FF;*/
+	border: 1px solid rgba(0, 0, 0, 0.075);
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.table.listing td.col-3 {
+	/*width: none;*/
+	width: 100%;
+	padding: 5px;
+	/*border: 1px solid #C3D9FF;*/
+	border: 1px solid rgba(0, 0, 0, 0.075);
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+h1 {
+	/*color:#0B486B;*/
+	color:#ec9e59;
+	font-size: 30px;
+	/*border-bottom:1px solid #0B486B;*/
+	border-bottom:none;
+	text-align: center;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+}
+
+.button5 {background-color: #555555;} /* Black */
+
+#content_header {
+	padding-left:20px;
+	height:80px;
+	background:#fff image-url("header_underline.jpg") bottom no-repeat;
+	/*background-color: lightgoldenrodyellow;*/
+	background-color: #dcafaf;
+}
+
+#all_form {
+    padding-left: 50px;
+    margin-top: 33px;
+}
+
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    background-color: transparent;
+}
