@@ -4,8 +4,7 @@ class Amol361 < ApplicationRecord
   
   # belongs_to :user
   
-  belongs_to :user, class_name: "Amol361",
-                        foreign_key: "amol361_id"
+  belongs_to :user
   
   scope :visible, -> { where(hidden: false) }
   # returns only visible xvaziri's

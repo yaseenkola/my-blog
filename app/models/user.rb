@@ -6,6 +6,6 @@ class User < ApplicationRecord
          
   has_many :blogs
   
-  has_many :amol361s, dependent: :destroy
+  has_many :amol361s, class_name: "Amol361", foreign_key: "user_id", dependent: :destroy
   
 end
