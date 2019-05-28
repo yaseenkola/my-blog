@@ -2,7 +2,10 @@ class Amol361 < ApplicationRecord
   
   validates :description, presence: true
   
-  belongs_to :user
+  # belongs_to :user
+  
+  belongs_to :user, class_name: "Amol361",
+                        foreign_key: "amol361_id"
   
   scope :visible, -> { where(hidden: false) }
   # returns only visible xvaziri's
