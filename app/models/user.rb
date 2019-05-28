@@ -8,6 +8,6 @@ class User < ApplicationRecord
   
   # has_many :amol361s, class_name: "User", foreign_key: "user_id", dependent: :destroy
   
-  has_many :amol361s, dependent: :destroy
+  has_many :amol361s, foreign_key: "user_id",  dependent: :destroy
   
 end
