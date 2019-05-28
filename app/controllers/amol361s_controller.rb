@@ -43,7 +43,7 @@ class Amol361sController < ApplicationController
 	end
 
 	def update
-		if @amol361.update(amol361)
+		if @amol361.update(amol361_params)
 			flash[:notice] = 'Amol361 Updated'
 			redirect_to amol361s_url
 		else
