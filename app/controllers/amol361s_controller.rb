@@ -6,7 +6,7 @@ class Amol361sController < ApplicationController
   
   def index
     # @amol361s = current_user.amol361s.search(params[:search]).visible
-    @amol361s = current_user.amol361s.all
+    @amol361s = current_user.amol361s.all.visible
     # @amol361s = Amol361.search(params[:search]).visible
 		respond_to do |format|
 			format.js

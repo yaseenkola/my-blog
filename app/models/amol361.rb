@@ -13,9 +13,9 @@ class Amol361 < ApplicationRecord
   	update_attribute(:hidden, true)
   end
 
-  def show
-  	update_attribute(:hidden, false)
-  end
+  # def show
+  # 	update_attribute(:hidden, false)
+  # end
 
   scope :hidden, -> { where(hidden: true) }
 
