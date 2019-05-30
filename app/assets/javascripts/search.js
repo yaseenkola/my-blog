@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).on('ready turbolinks:load', function() {
 	// $(document).on('page:change', function () {
 		$("div#sample").hide();
 

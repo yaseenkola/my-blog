@@ -20,7 +20,7 @@
 
 /* global $ */
 
-$(document).ready(function() { 
+$(document).on('ready turbolinks:load', function() {
 
   $("a.test").on( "click", function( event ) { 
   var id = $(this).attr("id"); 
