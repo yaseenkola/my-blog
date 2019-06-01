@@ -151,6 +151,7 @@
 .myTable {
 	/*background: #C3D9FF none repeat scroll 0% 0%;*/
 	background: rgba(0, 0, 0, 0.09) none repeat scroll 0% 0%;
+	background: #2db96b2e none repeat scroll 0% 0%;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -258,4 +259,20 @@ a {
     color: #ffffff !important;
     text-decoration: none !important;
     background-color: transparent;
+}
+
+.balance_pos {
+	color: f00;
+}
+
+.balance_neg {
+	color: red;
+}
+
+.pos {
+	color: #464444;
+}
+.neg {
+	/*color: #f00;*/
+	color: #ab1212;
 }
