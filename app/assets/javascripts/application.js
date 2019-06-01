@@ -37,7 +37,7 @@ $(document).ready(function(){
   }); 
 });
 
- $(document).on('turbolinks:load', function() {
+ $(document).ready(function(){
    $('#fade-out-target').fadeOut(4000);
  });
  
