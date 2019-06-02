@@ -16,7 +16,7 @@ class Amol361sController < ApplicationController
 
 	def import
 		Amol361.import(params[:file])
-		redirect_to amol361s_url, notice: "Records imported."
+		redirect_to amol361s_url, notice: "Record was successfully imported."
 	end
 
 	def show
@@ -32,7 +32,7 @@ class Amol361sController < ApplicationController
 		# @amol361 = Amol361.new(amol361)
 		if
 		    @amol361.save
-			flash[:notice] = 'Record Created'
+			flash[:notice] = 'Record was successfully Created'
 			redirect_to amol361s_url
 		else
 			render 'new'
@@ -44,7 +44,7 @@ class Amol361sController < ApplicationController
 
 	def update
 		if @amol361.update(amol361_params)
-			flash[:notice] = 'Record Updated'
+			flash[:notice] = 'Record was successfully Updated'
 			redirect_to amol361s_url
 		else
 			render 'edit'
