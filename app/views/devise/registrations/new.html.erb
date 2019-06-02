@@ -8,6 +8,24 @@
   
   <div class="form-group row">
     <div class="control-label col-md-2">
+      <%= f.label :name %><br />
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :username %><br />
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
       <%= f.label :email %><br />
     </div>
     <div class="col-md-8">

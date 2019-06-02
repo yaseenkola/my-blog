@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'welcome', to: 'welcome#index'
   
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   resources :blogs do 
@@ -15,7 +16,9 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :amol361s do 
+  # get 'statement', to: "amol361s#index"
+  
+  resources :amol361s, path: 'statements' do 
 		member do 
 			put :hide
 		end
