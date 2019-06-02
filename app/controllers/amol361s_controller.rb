@@ -16,7 +16,7 @@ class Amol361sController < ApplicationController
 
 	def import
 		Amol361.import(params[:file])
-		redirect_to amol361s_url, notice: "Amol361s imported."
+		redirect_to amol361s_url, notice: "Records imported."
 	end
 
 	def show
@@ -32,7 +32,7 @@ class Amol361sController < ApplicationController
 		# @amol361 = Amol361.new(amol361)
 		if
 		    @amol361.save
-			flash[:notice] = 'Amol361 Created'
+			flash[:notice] = 'Record Created'
 			redirect_to amol361s_url
 		else
 			render 'new'
@@ -44,7 +44,7 @@ class Amol361sController < ApplicationController
 
 	def update
 		if @amol361.update(amol361_params)
-			flash[:notice] = 'Amol361 Updated'
+			flash[:notice] = 'Record Updated'
 			redirect_to amol361s_url
 		else
 			render 'edit'
@@ -54,14 +54,14 @@ class Amol361sController < ApplicationController
 
 	def destroy
 		@amol361.destroy
-		flash[:notice] = 'Amol361 was successfully destroyed.'
+		flash[:notice] = 'Record was successfully destroyed.'
 		redirect_to amol361s_url 	
 	end
 
 	def hide
 		@amol361 = Amol361.find(params[:id])
 		@amol361.hide
-		# flash[:notice] = 'Amol361 was successfully hidden.'
+		# flash[:notice] = 'Record was successfully hidden.'
 		# redirect_to amol361s_url    
 	end
 
