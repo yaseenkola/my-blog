@@ -15,8 +15,8 @@ class Amol361sController < ApplicationController
 	end
 
 	def import
-		Amol361.import(params[:file])
-		redirect_to amol361s_url, notice: "Record was successfully imported."
+		Amol361.import(params[:file], current_user)
+		redirect_to amol361s_url, notice: "File was successfully imported."
 	end
 
 	def show
