@@ -86,7 +86,7 @@ class Amol361sController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def amol361_params
-    	params.require(:amol361).permit(:date, :description, :amount, :discount, :paid, :delndel, :remark, :balance, :user_id)
+    	params.require(:amol361).permit(:date, :description, :amount, :discount, :paid, :delndel, :remark, :balance)
     end
     
 end
