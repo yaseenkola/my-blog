@@ -30,7 +30,18 @@
        
      </ul>
      
+     
      <ul class="navbar-nav ml-auto">
+       
+          <li class="nav-item nav-link" style="color: white;font-weight: bold;">
+            
+             Logged in as: <span class="badge">
+               
+                             <%= active_link_to current_user.username %> 
+            
+                           </span>
+
+          </li>
      
           <li class="nav-item">
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
