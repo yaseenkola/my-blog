@@ -67,4 +67,4 @@ gem 'active_link_to'
 
 gem 'roo'
 # gem 'roo-xls', '~> 1.0'
-gem 'roo-xls', '~> 1.1'
+gem 'roo-xls', '~> 1.2'
