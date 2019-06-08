@@ -64,3 +64,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'active_link_to'
+
+gem 'roo'
+# gem 'roo-xls', '~> 1.0'
+gem 'roo-xls', '~> 1.1'
