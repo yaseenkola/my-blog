@@ -5,13 +5,25 @@ class Amol361sController < ApplicationController
   before_action :set_amol361, only: [:show, :edit, :update, :destroy]
   
   def index
-    @amol361s = current_user.amol361s.all.search(params[:search]).visible
-    # @amol361s = current_user.amol361s.all.visible
-    # @amol361s = Amol361.search(params[:search]).visible
-		respond_to do |format|
-			format.js
-			format.html 
-		end 
+  	
+  	 if current_user.admin?
+      @amol361s = Amol361.all.search(params[:search])
+    else
+      @amol361s = current_user.amol361s.all.search(params[:search]).visible 
+    end
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    
+  #  @amol361s = current_user.amol361s.all.search(params[:search]).visible
+  #  @amol361s = current_user.amol361s.all.visible
+  #  @amol361s = Amol361.search(params[:search]).visible
+		# respond_to do |format|
+		# 	format.js
+		# 	format.html 
+		# end 
 	end
 
 	def import
