@@ -76,8 +76,9 @@
 	<br> 
 
 <!-- <button class="button button5">Black</button> -->
+  <% if current_user && current_user.admin %>
 	<%= link_to "Unhide all", unhide_all_amol361_path, method: :put, class: "button button5", style:"color:  pink;margin-left: 927px; display: inline;" %>
-
+  <% end %>
  
 
 	<center><p class="<%= @balance >= 0 ? "balance_pos" : "balance_neg" %>"><b><%= number_to_currency(@balance.abs, :unit => 'AED ', :delimiter => ",", :precision => 0) %></b></p></center>
@@ -100,4 +101,7 @@
     <br>
     <br>
     <br>
-	<center> <%= link_to "Remove All", remove_all_amol361s_path, :method => :get, data: {confirm: 'Are you sure?'} %></center>
+    
+    <% if current_user && current_user.admin %>
+	   <center> <%= link_to "Remove All", remove_all_amol361s_path, :method => :get, data: {confirm: 'Are you sure?'} %></center>
+	<% end %>   
