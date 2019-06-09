@@ -68,3 +68,5 @@ gem 'active_link_to'
 gem 'roo'
 # gem 'roo-xls', '~> 1.0'
 gem 'roo-xls', '~> 1.2'
+
+gem 'font-awesome-sass'
