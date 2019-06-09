@@ -24,12 +24,12 @@
 
 	<td class="col-1"><%= amol361.remark %></td>
 
-
+<% if current_user && current_user.admin %>
 <td class="col-1"><%= link_to "Hide", hide_amol361_path(amol361), method: :put, remote: true, style: "color:#bb7272;" %>
 	<%= link_to amol361, method: :delete, data: { confirm: "Are you sure?" }, :class => 'delete_item' do %>
 	<i class="fa fa-trash" ></i>
 	<% end %>
 </td>
-
+<% end %>
 
 </tr>
