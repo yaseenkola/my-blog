@@ -48,8 +48,9 @@
 						<td>Balance</td>
 						<td>DelnDel</td>
 						<td>Remark</td>
-						
-						<td id="mystyle">Hide</td>
+						<% if current_user && current_user.admin %>
+						 <td id="mystyle">Hide</td>
+						<% end %>
 
 					</tr>
 				</thead>
