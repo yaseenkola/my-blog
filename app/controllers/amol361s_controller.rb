@@ -7,9 +7,9 @@ class Amol361sController < ApplicationController
   def index
   	
   	 if current_user.admin
-      @amol361s = Amol361.all.search(params[:search])
+      @amol361s = Amol361.all.search(params[:search]).order("created_at DESC")
     else
-      @amol361s = current_user.amol361s.all.search(params[:search]).visible 
+      @amol361s = current_user.amol361s.all.search(params[:search]).visible.order("created_at DESC") 
     end
     
     respond_to do |format|
