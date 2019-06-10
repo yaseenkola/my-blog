@@ -6,7 +6,7 @@ class Amol361sController < ApplicationController
   
   def index
   	
-  	 if current_user.admin?
+  	 if current_user.admin
       @amol361s = Amol361.all.search(params[:search])
     else
       @amol361s = current_user.amol361s.all.search(params[:search]).visible 
