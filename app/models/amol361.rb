@@ -62,5 +62,9 @@ class Amol361 < ApplicationRecord
     else raise "Unknown file type: #{file.original_filename}"
     end 
   end
+  
+  def paid=(value)
+    write_attribute(:paid, value.gsub(/\./, ''))
+  end
 
 end
