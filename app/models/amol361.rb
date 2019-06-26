@@ -2,7 +2,7 @@ class Amol361 < ApplicationRecord
   
   validates :description, presence: true
   
-  validates_format_of :paid, :with => /[,.]/
+  validates_format_of :paid, :with => /,/
   
   # belongs_to :user
   
