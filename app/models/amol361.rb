@@ -1,11 +1,27 @@
-class Amol361 < ApplicationRecord
-  
-  validates :description, presence: true
-  
-  # validates_format_of :paid, :with => /,/
-  
-  # belongs_to :user
-  
+class Amol361 < ApplicationRecord 
+ validates :description, presence: true 
+
+ # attr_accessor :paid_input 
+ # validate :check_paid_input 
+
+ # def check_paid_input 
+ #  paid = paid_input 
+ #  p "paid: #{paid}, paid_input: #{paid_input}" 
+ #  errors.add(:paid, '- Commas are not allowed') if paid_input.to_s.include?(',') 
+ #  paid = paid_input.gsub(/,/, " ")
+ # end
+ 
+ # validates :paid, numericality: { only_integer: true }, allow_nil: true
+ 
+
+ # validate :custom_validation
+ 
+ #  def custom_validation
+ #    if paid_input.to_s.include?(',')
+ #     errors.add(:paid, '- Commas are not allowed')
+ #    end
+ #  end
+
   belongs_to :user
   
   scope :visible, -> { where(hidden: false) }
@@ -35,8 +51,8 @@ class Amol361 < ApplicationRecord
     
     # where (["description LIKE ? OR amount LIKE ? OR paid LIKE ? OR delndel LIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%"]) 
     # where (["description::text ILIKE ? OR amount::text ILIKE ? OR paid::text ILIKE ?", "%#{search}%","%#{search}%","%#{search}%"])
-    where (["description::text ILIKE ?", "%#{search}%"])
-    # where (["description LIKE ?", "%#{search}%"])
+    # where (["description::text ILIKE ?", "%#{search}%"])
+    where (["description LIKE ?", "%#{search}%"])
   end
 
   # def self.import(file)

@@ -24,7 +24,11 @@ $('input[type="text"]').on('blur', function() {
 
     var balance = amount - discount - paid;
 
-    Calc_balance.val(balance + <%= Amol361.last.try(:balance) || 0 %>);
+    // Calc_balance.val(balance + <%= Amol361.last.try(:balance) || 0 %>);
+    
+    // if (Calc_balance.val(balance + <%= Amol361.last.try(:balance) || 0 %>) == NaN ) {
+    //   alert("R");
+    // }
 
 });
 </script>
