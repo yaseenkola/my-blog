@@ -1,8 +1,11 @@
 <tr class="tr-<%= cycle('odd', 'even') %>" id='<%= "tr_#{amol361.id}" %>'>
 
 	
-
+    <% if current_user && current_user.admin %>
 	<td class="col-1"><%= link_to amol361.date.try(:strftime,'%d/%m/%Y'), edit_amol361_path(amol361) %></td>
+	<% else %>
+	 <td class="col-1"><%= amol361.date.try(:strftime,'%d/%m/%Y') %></td>
+	<% end %>
 	
 	<td class="col-3"><%= span_with_possibly_red_color amol361.description %></td>
 
