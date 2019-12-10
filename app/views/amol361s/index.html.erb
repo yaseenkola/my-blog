@@ -69,8 +69,8 @@
 
 
 <% @amol361s.each do |amol361| %>
-<tr class="tr-<%= cycle('odd', 'even') %>" id='<%= "tr_#{amol361.id}" %>'>
 
+<tr class="tr-<%= cycle('odd', 'even') %>" id='<%= "tr_#{amol361.id}" %>'>
 
 <% if current_user && current_user.admin %>
 <td class="col-1"><%= link_to amol361.date.try(:strftime,'%d/%m/%Y'), edit_amol361_path(amol361) %></td>

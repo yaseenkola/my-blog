@@ -52,7 +52,7 @@ class Amol361 < ApplicationRecord
     # where (["description LIKE ? OR amount LIKE ? OR paid LIKE ? OR delndel LIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%"]) 
     # where (["description::text ILIKE ? OR amount::text ILIKE ? OR paid::text ILIKE ?", "%#{search}%","%#{search}%","%#{search}%"])
     #where (["description::text ILIKE ?", "%#{search}%"])
-    where (["description LIKE ? OR amount LIKE ? OR paid LIKE ? OR delndel ILIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%"]) 
+    where (["description ILIKE ? OR amount ILIKE ? OR paid ILIKE ? OR delndel ILIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%"]) 
 
     #where (["description LIKE ?", "%#{search}%"])
   end
