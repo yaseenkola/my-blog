@@ -7,6 +7,7 @@ class Amol361sController < ApplicationController
   def index
   	
   	 if current_user.admin
+      # @users = User.all
       @amol361s = Amol361.all.search(params[:search]).order("created_at ASC")
     else
       @amol361s = current_user.amol361s.all.search(params[:search]).visible.order("created_at ASC") 
